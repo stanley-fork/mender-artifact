@@ -251,6 +251,7 @@ test:install:brew:
 
 publish:tests:
   stage: publish
+  allow_failure: true
   image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/golang:1.25
   needs:
     - job: test:unit:linux
